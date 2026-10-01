@@ -50,7 +50,7 @@ export default function Projects() {
                     )}
                     {p.repo && (
                       <a href={p.repo} target="_blank" rel="noreferrer" className="underline">
-                        Código
+                        Repositorio
                       </a>
                     )}
                   </div>

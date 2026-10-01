@@ -1,29 +1,29 @@
 export const projects = [
   {
-    titulo: 'Invitación',
+    titulo: 'Sistema de Parqueo',
     descripcion:
-      'Invitación interactiva desarrollada en HTML. Al hacer clic sobre el sobre, se despliega una tarjeta con toda la información del evento. Incluye un botón de "Ubicación" que redirige al lugar exacto mediante un enlace.',
-    imagen: '/Multimedia/invitacio.png',
-    tecnologias: ['HTML'],
+      'Aplicación web para administrar espacios de parqueo, registrar vehículos y calcular pagos.',
+    imagen: '/Multimedia/campusParking.png',
+    tecnologias: ['HTML','CSS','JavaScript'],
     demo: '', // pon aquí el enlace cuando funcione
-    repo: '',
+    repo: 'https://github.com/Jose-langL/Campus_parking.git',
   },
   {
-    titulo: 'Calculadora',
+    titulo: 'Gestion de Hotel',
     descripcion:
-      'Programa de calculadora desarrollado en Visual Basic. Se ejecuta en una interfaz tipo ventana, donde el usuario puede realizar operaciones básicas.',
+      'Aplicacion web para administrar las habitaciones de un hotel, registrar habitacion y estado de las habitaciones',
     imagen: '/Multimedia/calculadora.png',
-    tecnologias: ['Visual Basic'],
+    tecnologias: ['HTML','CSS','JavaScript'],
     demo: '',
-    repo: '',
+    repo: 'https://github.com/Jose-langL/Gesti-n-del-hotel.git',
   },
   {
-    titulo: 'Ruleta de Lenguajes',
+    titulo: 'Distribuidora de Gaseosas',
     descripcion:
-      'Ruleta interactiva desarrollada en HTML. Al girarla y detenerse en un tema, se muestra una ventana emergente que indica cuál fue el tema seleccionado y presenta su contenido correspondiente.',
-    imagen: '/Multimedia/ruleta1.png',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+      'Sistema de Gestión para Distribuidora de Gaseosas — Base de datos relacional en MySQL con 8 tablas interconectadas que modelan clientes, pedidos, productos, sedes y encargados.',
+    imagen: '/Multimedia/Distribuidora.png',
+    tecnologias: ['MYSQL'],
     demo: '',
-    repo: '',
+    repo: 'https://github.com/Jose-langL/distribuidora-gaseosas-del-valle-sa.git',
   },
 ]
