@@ -36,7 +36,7 @@ export default function About() {
               <dt className="opacity-60">File type</dt>
               <dd>Markdown Document</dd>
               <dt className="opacity-60">Role</dt>
-              <dd>Estudiante de programación</dd>
+              <dd>Técnico en Desarrollo de Software</dd>
               <dt className="opacity-60">Status</dt>
               <dd className="text-green-700 dark:text-green-400">● Buscando oportunidades</dd>
             </dl>

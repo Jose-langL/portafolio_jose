@@ -3,13 +3,13 @@ export const files = [
     name: 'bio.md',
     titulo: '¿Quién soy?',
     texto:
-      'Soy estudiante en formación en desarrollo de software y diseño web, caracterizado por mi responsabilidad, competitividad y resiliencia. Me apasiona enfrentar nuevos retos y encontrar soluciones eficientes que aporten valor. Actualmente estoy fortaleciendo mis habilidades en programación, resolución de problemas y optimización de proyectos digitales, con el objetivo de crecer como desarrollador integral y aportar creatividad e innovación en cada proyecto.',
+      'Soy Técnico en Desarrollo de Software, orientado al desarrollo web y backend. Me caracterizo por ser responsable, organizado y creativo, con un interés constante por aprender y mejorar mis habilidades. He desarrollado proyectos académicos y personales aplicando buenas prácticas y buscando soluciones eficientes. Busco integrarme a un equipo de desarrollo donde pueda aportar mis conocimientos, compartir ideas y seguir creciendo personal y profesionalmente.',
   },
   {
     name: 'hobbies.md',
     titulo: 'Hobbies',
     texto:
-      'Me gusta el dibujo estilo pixel-art y disfruto mucho de los videojuegos, que inspiran mi creatividad y mi forma de diseñar. Escucho todo tipo de música, aunque mis artistas favoritos son Deftones, La Santa Grifa y Adán Cruz. Además, me gusta dibujar y hacer grafitis, una manera de expresar mi lado artístico.',
+      'Me gusta el dibujo, sobre todo el estilo pixel-art, una actividad que fortalece mi atención al detalle, paciencia y creatividad. Disfruto los videojuegos, que inspiran mi forma de diseñar, y las motocicletas, por la sensación de libertad y adrenalina que me transmiten. También escucho música para relajarme, concentrarme y encontrar inspiración, y en mis tiempos libres disfruto aprender cosas nuevas.',
   },
   {
     name: 'objetivos.md',

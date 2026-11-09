@@ -11,14 +11,10 @@ export default function Hero() {
         <p className="text-[10px] tracking-widest opacity-60">// HELLO, WORLD</p>
         <h1 className="mt-3 text-4xl font-bold md:text-6xl">Jose Luis Tot</h1>
         <h2 className="mt-2 text-sm text-green-700 dark:text-green-400">
-          Estudiante de programación en formación
+          Técnico en Desarrollo de Software
         </h2>
         <p className="mt-6 text-sm leading-relaxed opacity-80">
-          Soy un estudiante en formación, responsable, competitivo y resiliente, con interés en
-          el desarrollo de software. Actualmente busco oportunidades que me permitan adquirir
-          experiencia y fortalecer mis conocimientos en un entorno práctico. Me encuentro en
-          constante aprendizaje, desarrollando habilidades en programación y resolución de
-          problemas.
+        Soy Técnico en Desarrollo de Software, orientado al desarrollo web y backend. Me caracterizo por ser responsable, organizado y creativo, con un interés constante por aprender y mejorar mis habilidades. He desarrollado proyectos académicos y personales aplicando buenas prácticas y buscando soluciones eficientes. Busco integrarme a un equipo de desarrollo donde pueda aportar mis conocimientos, compartir ideas y seguir creciendo personal y profesionalmente.
         </p>
         <div className="mt-6 flex gap-4 text-3xl">
           <a href="https://github.com/Jose-langL" target="_blank" rel="noreferrer" aria-label="GitHub">
