@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-
-const NOMBRE = 'BIENVENIDOS' // cámbialo por el tuyo
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Intro({ onFinish }) {
+  const { t } = useLang()
+  const NOMBRE = t.intro.nombre
   const root = useRef(null)
   const [count, setCount] = useState(0)
 
@@ -56,7 +57,7 @@ export default function Intro({ onFinish }) {
       </h1>
 
       <div className="mt-6 flex w-64 justify-between font-mono text-[10px] tracking-widest text-neutral-400">
-        <span>PORTAFOLIO</span>
+        <span>{t.intro.sub}</span>
         <span>{String(count).padStart(3, '0')}</span>
       </div>
     </div>

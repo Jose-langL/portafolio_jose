@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
 import ThemeToggle from './ThemeToggle'
+import LanguageToggle from './LanguageToggle'
+import { useLang } from '../i18n/LanguageContext'
 
 const LINKS = [
-  { id: 'inicio', label: 'HOME' },
-  { id: 'about', label: 'ABOUT' },
-  { id: 'proyectos', label: 'PROJECTS' },
-  { id: 'skills', label: 'SKILLS' },
-  { id: 'contacto', label: 'CONTACT' },
+  { id: 'inicio', key: 'home' },
+  { id: 'about', key: 'about' },
+  { id: 'proyectos', key: 'projects' },
+  { id: 'skills', key: 'skills' },
+  { id: 'contacto', key: 'contact' },
 ]
 
 export default function Navbar() {
   const [activa, setActiva] = useState('inicio')
+  const { t } = useLang()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,21 +37,27 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden gap-8 md:flex">
-          {LINKS.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={`transition-opacity ${
-                  activa === id ? 'opacity-100' : 'opacity-50 hover:opacity-100'
-                }`}
-              >
-                {activa === id ? `[ ${label} ]` : label}
-              </a>
-            </li>
-          ))}
+          {LINKS.map(({ id, key }) => {
+            const label = t.nav[key]
+            return (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`transition-opacity ${
+                    activa === id ? 'opacity-100' : 'opacity-50 hover:opacity-100'
+                  }`}
+                >
+                  {activa === id ? `[ ${label} ]` : label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
-        <ThemeToggle />
+        <div className="flex items-center gap-4">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   )

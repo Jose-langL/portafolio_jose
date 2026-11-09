@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import WindowFrame from '../components/WindowFrame'
 import FileExplorer from '../components/FileExplorer'
-import { files } from '../data/about'
+import { useLang } from '../i18n/LanguageContext'
 
 export default function About() {
+  const { t } = useLang()
+  const files = t.about.files
   const [activo, setActivo] = useState(files[0].name)
   const archivo = files.find((f) => f.name === activo)
 
@@ -33,12 +35,12 @@ export default function About() {
             <p className="mt-4 text-sm leading-relaxed opacity-80">{archivo.texto}</p>
 
             <dl className="mt-6 grid grid-cols-[90px_1fr] gap-y-2 text-xs">
-              <dt className="opacity-60">File type</dt>
-              <dd>Markdown Document</dd>
-              <dt className="opacity-60">Role</dt>
-              <dd>Técnico en Desarrollo de Software</dd>
-              <dt className="opacity-60">Status</dt>
-              <dd className="text-green-700 dark:text-green-400">● Buscando oportunidades</dd>
+              <dt className="opacity-60">{t.about.fileType}</dt>
+              <dd>{t.about.fileTypeValue}</dd>
+              <dt className="opacity-60">{t.about.role}</dt>
+              <dd>{t.hero.role}</dd>
+              <dt className="opacity-60">{t.about.status}</dt>
+              <dd className="text-green-700 dark:text-green-400">{t.about.statusValue}</dd>
             </dl>
           </motion.div>
         </div>

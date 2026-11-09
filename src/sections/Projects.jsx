@@ -1,19 +1,19 @@
 import WindowFrame from '../components/WindowFrame'
 import Reveal from '../components/Reveal'
 import { projects } from '../data/projects'
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Projects() {
+  const { t } = useLang()
   return (
     <section
       id="proyectos"
       className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
     >
       <p className="mb-2 text-[10px] tracking-widest opacity-60">// 03 PROJECTS</p>
-      <h2 className="text-3xl font-bold">Proyectos</h2>
+      <h2 className="text-3xl font-bold">{t.projects.titulo}</h2>
       <p className="mt-3 max-w-2xl text-sm opacity-80">
-        Aquí puedes ver algunos de los proyectos que he desarrollado utilizando diferentes
-        tecnologías. Cada proyecto incluye una breve descripción y las herramientas empleadas
-        para crearlos.
+        {t.projects.intro}
       </p>
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -28,7 +28,7 @@ export default function Projects() {
               />
               <div className="flex flex-1 flex-col p-4">
                 <h3 className="text-lg font-bold">{p.titulo}</h3>
-                <p className="mt-2 flex-1 text-xs leading-relaxed opacity-80">{p.descripcion}</p>
+                <p className="mt-2 flex-1 text-xs leading-relaxed opacity-80">{t.projects.descripciones[i]}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {p.tecnologias.map((t) => (
@@ -45,12 +45,12 @@ export default function Projects() {
                   <div className="mt-4 flex gap-4 text-xs">
                     {p.demo && (
                       <a href={p.demo} target="_blank" rel="noreferrer" className="underline">
-                        Ver app
+                        {t.projects.verApp}
                       </a>
                     )}
                     {p.repo && (
                       <a href={p.repo} target="_blank" rel="noreferrer" className="underline">
-                        Repositorio
+                        {t.projects.repo}
                       </a>
                     )}
                   </div>

@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import { FaRegFolder } from 'react-icons/fa'
 import WindowFrame from '../components/WindowFrame'
 import { CATEGORIAS, skills, contar } from '../data/skills'
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Skills() {
+  const { t } = useLang()
   const [categoria, setCategoria] = useState('Todos')
   const visibles = skills.filter((s) => categoria === 'Todos' || s.categoria === categoria)
 
@@ -14,7 +16,7 @@ export default function Skills() {
       className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
     >
       <p className="mb-2 text-[10px] tracking-widest opacity-60">// 04 TECH STACK & TOOLS</p>
-      <h2 className="mb-6 text-3xl font-bold">Tecnologías</h2>
+      <h2 className="mb-6 text-3xl font-bold">{t.skills.titulo}</h2>
 
       <WindowFrame title="SKILLS.EXE" path={`C:/portfolio/skills/${categoria.toLowerCase().replace(' ', '_')}`}>
         <div className="flex flex-col md:flex-row">
@@ -33,7 +35,7 @@ export default function Skills() {
                     }`}
                   >
                     <FaRegFolder className="text-amber-500" />
-                    <span className="flex-1">{c}</span>
+                    <span className="flex-1">{t.skills.categorias[c]}</span>
                     <span className="rounded-full bg-neutral-300 px-1.5 text-[10px] dark:bg-neutral-600">
                       {contar(c)}
                     </span>
