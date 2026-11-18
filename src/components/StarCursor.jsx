@@ -52,10 +52,11 @@ export default function StarCursor({ forzarClaro = false }) {
       const claro = claroRef.current || document.documentElement.classList.contains('dark')
       const color = claro ? '255,255,255' : '30,30,30'
 
-      // la estrella persigue al mouse con retraso
-      const suavizado = reducir ? 1 : 0.18
-      estrella.x += (mouse.x - estrella.x) * suavizado
-      estrella.y += (mouse.y - estrella.y) * suavizado
+      // Mantener el centro de la estrella exactamente bajo el puntero.
+      // El retraso de interpolación hacía que el cursor personalizado se
+      // quedara atrás, especialmente al mover el mouse rápido.
+      estrella.x = mouse.x
+      estrella.y = mouse.y
       estrella.escala += (estrella.objetivo - estrella.escala) * 0.15
       if (!reducir) estrella.rot += 0.02
 
