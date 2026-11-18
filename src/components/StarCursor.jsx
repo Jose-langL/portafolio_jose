@@ -27,6 +27,10 @@ export default function StarCursor({ forzarClaro = false }) {
       h = window.innerHeight
       canvas.width = w * dpr
       canvas.height = h * dpr
+      // El buffer interno usa píxeles físicos; el tamaño CSS debe seguir
+      // siendo el del viewport para que clientX/clientY coincidan al dibujar.
+      canvas.style.width = `${w}px`
+      canvas.style.height = `${h}px`
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     }
 
