@@ -13,10 +13,8 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
+      className="section-shell about-shell mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
     >
-      <p className="mb-4 text-[10px] tracking-widest opacity-60"></p>
-
       <WindowFrame title="ABOUT_ME.EXE" path={`C:/portfolio/about_me/${archivo.name}`}>
         <div className="flex flex-col md:flex-row">
           <FileExplorer files={files} active={activo} onSelect={setActivo} />
@@ -26,7 +24,7 @@ export default function About() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex-1 p-6 md:p-8"
+            className="about-content flex-1 p-6 md:p-8"
           >
             <p className="text-[10px] tracking-widest opacity-60">
               // ACTIVE FILE: {archivo.name.toUpperCase()}

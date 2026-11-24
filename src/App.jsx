@@ -19,7 +19,7 @@ export default function App() {
       <StarCursor forzarClaro={cargando} />
       {cargando && <Intro onFinish={() => setCargando(false)} />}
 
-      <div className="grid-bg relative bg-neutral-100 font-mono text-neutral-900 transition-colors dark:bg-neutral-950 dark:text-neutral-100">
+      <div className="portfolio-shell grid-bg relative bg-neutral-100 font-mono text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <Starfield />
         <Navbar />
         <main className="relative z-10">

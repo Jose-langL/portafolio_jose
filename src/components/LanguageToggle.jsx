@@ -9,10 +9,10 @@ export default function LanguageToggle() {
     <button
       onClick={toggleLang}
       aria-label={lang === 'es' ? 'Switch to English' : 'Cambiar a español'}
-      className="flex items-center border border-neutral-400 text-[10px] tracking-widest dark:border-neutral-500"
+      className="language-toggle flex items-center border border-neutral-400 text-[10px] tracking-widest dark:border-neutral-500"
     >
-      <span className={`px-2 py-1 transition-colors ${lang === 'es' ? on : off}`}>ES</span>
-      <span className={`px-2 py-1 transition-colors ${lang === 'en' ? on : off}`}>EN</span>
+      <span className={`px-2 py-1 ${lang === 'es' ? on : off}`}>ES</span>
+      <span className={`px-2 py-1 ${lang === 'en' ? on : off}`}>EN</span>
     </button>
   )
 }

@@ -30,20 +30,20 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-neutral-300 bg-neutral-100/80 backdrop-blur dark:border-neutral-700 dark:bg-neutral-900/80">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 font-mono text-xs tracking-widest">
-        <a href="#inicio" className="text-sm font-bold">
+    <header className="site-header fixed inset-x-0 top-0 z-40 border-b border-neutral-300 bg-neutral-100/80 dark:border-neutral-700 dark:bg-neutral-900/80">
+      <nav className="site-nav mx-auto flex max-w-6xl items-center justify-between px-6 py-4 font-mono text-xs tracking-widest">
+        <a href="#inicio" className="site-mark text-sm font-bold">
           &lt;Jose Luis Herrera&gt;
         </a>
 
-        <ul className="hidden gap-8 md:flex">
+        <ul className="hidden gap-7 md:flex">
           {LINKS.map(({ id, key }) => {
             const label = t.nav[key]
             return (
               <li key={id}>
                 <a
                   href={`#${id}`}
-                  className={`transition-opacity ${
+                  className={`nav-link transition-opacity ${
                     activa === id ? 'opacity-100' : 'opacity-50 hover:opacity-100'
                   }`}
                 >

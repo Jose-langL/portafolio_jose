@@ -15,9 +15,8 @@ const ENLACES = [
 export default function Contact() {
   const { t } = useLang()
   return (
-    <section id="contacto" className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 pt-24">
+    <section id="contacto" className="section-shell contact-shell mx-auto flex min-h-screen max-w-6xl flex-col px-6 pt-24">
       <div className="flex flex-1 flex-col items-center justify-center text-center">
-        <p className="mb-3 text-[10px] tracking-widest opacity-60"></p>
         <h2 className="text-3xl font-bold md:text-5xl">{t.contact.titulo}</h2>
         <p className="mt-4 text-sm opacity-80">{t.contact.sub}</p>
 
@@ -28,7 +27,7 @@ export default function Contact() {
               href={href}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 border border-neutral-400 px-4 py-2 text-xs transition-colors hover:bg-neutral-200 dark:border-neutral-500 dark:hover:bg-neutral-700"
+              className="contact-link flex items-center gap-2 border border-neutral-400 px-4 py-2 text-xs transition-transform dark:border-neutral-500"
             >
               <Icono /> {label}
             </a>

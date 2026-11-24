@@ -13,7 +13,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
+      className="section-shell skills-shell mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-12 pt-24"
     >
       <p className="mb-2 text-[10px] tracking-widest opacity-60">// 04 TECH STACK & TOOLS</p>
       <h2 className="mb-6 text-3xl font-bold">{t.skills.titulo}</h2>
@@ -28,10 +28,10 @@ export default function Skills() {
                 <li key={c}>
                   <button
                     onClick={() => setCategoria(c)}
-                    className={`flex w-full items-center gap-2 border px-3 py-2 text-left text-xs transition-colors ${
+                    className={`flex w-full items-center gap-2 border px-3 py-2 text-left text-xs ${
                       categoria === c
                         ? 'border-neutral-500 bg-neutral-200 dark:bg-neutral-700'
-                        : 'border-transparent hover:bg-neutral-200/60 dark:hover:bg-neutral-700/60'
+                        : 'border-transparent opacity-65 hover:opacity-100'
                     }`}
                   >
                     <FaRegFolder className="text-amber-500" />
@@ -53,7 +53,7 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex flex-col items-center gap-3 border border-neutral-300 bg-white/60 py-8 transition-transform hover:-translate-y-1 dark:border-neutral-700 dark:bg-neutral-800/60"
+                className="skill-item flex flex-col items-center gap-3 border border-neutral-300 bg-white/60 py-8 transition-transform dark:border-neutral-700 dark:bg-neutral-800/60"
               >
                 <Icono className="text-4xl" style={color ? { color } : undefined} />
                 <span className="text-xs">{nombre}</span>

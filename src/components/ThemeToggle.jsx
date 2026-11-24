@@ -16,11 +16,11 @@ export default function ThemeToggle() {
     <button
       onClick={() => setDark(!dark)}
       aria-label={t.themeLabel}
-      className="relative h-5 w-10 rounded-full border border-neutral-400 dark:border-neutral-500"
+      className="theme-toggle relative h-5 w-10 rounded-full border border-neutral-400 dark:border-neutral-500"
     >
       <span
-        className={`absolute top-0.5 h-3.5 w-3.5 rounded-full bg-neutral-900 transition-all dark:bg-white ${
-          dark ? 'left-5' : 'left-0.5'
+        className={`absolute left-0.5 top-0.5 h-3.5 w-3.5 rounded-full bg-neutral-900 transition-transform dark:bg-white ${
+          dark ? 'translate-x-[1.125rem]' : 'translate-x-0'
         }`}
       />
     </button>

@@ -9,7 +9,7 @@ export default function FileExplorer({ files, active, onSelect }) {
           <li key={f.name}>
             <button
               onClick={() => onSelect(f.name)}
-              className={`flex w-full items-center gap-2 border px-3 py-2 text-left text-xs transition-colors ${
+              className={`flex w-full items-center gap-2 border px-3 py-2 text-left text-xs ${
                 active === f.name
                   ? 'border-neutral-500 bg-neutral-200 dark:bg-neutral-700'
                   : 'border-transparent hover:bg-neutral-200/60 dark:hover:bg-neutral-700/60'
