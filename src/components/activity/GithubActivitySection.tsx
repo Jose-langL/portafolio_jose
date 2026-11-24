@@ -139,6 +139,7 @@ export const GithubActivitySection: React.FC = () => {
               <GithubHeatmapGrid
                 contributions={data?.contributions || []}
                 loading={loading}
+                language="es"
               />
             )}
           </div>

@@ -15,11 +15,6 @@ const reveal: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } }
 };
 
-const stagger: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } }
-};
-
 const content = {
   es: {
     nav: ['Inicio', 'Sobre mí', 'Proyectos', 'Tecnologías', 'Actividad', 'Contacto'],
